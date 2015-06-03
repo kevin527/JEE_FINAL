@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./../resources/css/estilo.css" rel="stylesheet" type="text/css" />
+        <title>
+            
+            <ui:insert name="titulo">
+                Facelets Template
+            </ui:insert>
+            
+        </title>
+        
+    </h:head>
+
+    <h:body>
+
+        <header id="cabecera">
+            <ui:insert name="cabecera">
+                <p:graphicImage value="images/galleria/logo.png" />
+            </ui:insert>
+            
+            
+        </header>
+
+        <div class="cuerpo">
+            <nav id="menu">
+                
+                <h:form>
+                    <ul>
+                        
+                        <li><h:commandLink action="inicio">Inicio</h:commandLink></li>
+                        <li><h:commandLink action="productos">Productos</h:commandLink></li>
+                        <li><h:commandLink action="localizacion">Localización</h:commandLink></li>
+                        <li><h:commandLink action="contacto">Contacto</h:commandLink></li>
+                    </ul> 
+                </h:form>
+            </nav>
+
+            <article class="contenido">
+                <ui:insert name="contenido">
+                    Aqui va el contenido de la página
+                </ui:insert>
+            </article>
+        </div>
+
+        <footer id="pie">
+           
+            <p:notificationBar position="top" effect="slide" styleClass="top" widgetVar="bar" autoDisplay="false">
+    <h:outputText  value="El Chevrolet Corvette Stingray 2016 ha sido desvelado. El nuevo modelo cuenta con una serie de cambios, así como tres paquetes de diseño.  " style="font-size:18px;" />
+</p:notificationBar>
+ 
+<p:commandButton value="NOTICIAS" onclick="PF('bar').show()" type="button" icon="ui-icon-arrow-1-s"/>
+<p:commandButton value="OCULTAR" onclick="PF('bar').hide()" type="button" icon="ui-icon-arrow-1-n"/>
+        </footer>
+
+    </h:body>
+
+</html>
