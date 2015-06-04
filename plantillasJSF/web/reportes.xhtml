@@ -2,20 +2,32 @@
 <!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="./plantillas/plantilla.xhtml"
-                xmlns:h="http://xmlns.jcp.org/jsf/html">
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
 
     <ui:define name="titulo">
         titulo
     </ui:define>
 
     <ui:define name="cabecera">
-        cabecera
+        <ui:insert name="cabecera">
+                <p:graphicImage value="images/galleria/logo.png" />
+            </ui:insert>
     </ui:define>
 
     <ui:define name="contenido">
         <h:form>
-        <li><h:commandLink action="formulario.jsp">REPORTE POR MARCA</h:commandLink></li>
-        <li><h:commandLink action="Reporte.jsp">REPORTE GENERAL</h:commandLink></li>
+        <li><h:commandLink action="formulario.jsp">REPORTE DE AUTOS POR MARCA</h:commandLink></li>
+        <li><h:commandLink action="Reporte.jsp">REPORTE DE TODOS LOS AUTOS</h:commandLink></li>
+        </h:form>
+        
+        <h:form>
+        <li><h:commandLink action="index.xhtml">ADMINISTAR CLIENTES</h:commandLink></li>
+        </h:form>
+        
+        <h:form>
+        <li><h:commandLink action="clientes general.jsp">REPORTE DE CLIENTES</h:commandLink></li>
+        
         </h:form>
     </ui:define>
 
